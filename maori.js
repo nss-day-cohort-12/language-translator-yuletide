@@ -20,6 +20,7 @@ var Translator = function() {
 		// translateTo{Language} (e.g. translateToSpanish or translateToFinnish) that accepts 
 		// a single argument. That argument's value should be the text entered in by the user.
 		translateToMaori: function(input) {
+			var translatedMessage = "";
 			var inputArray = input.split(" ");
 			console.log("input", inputArray);
 			inputArray.forEach(function(element){
@@ -27,8 +28,10 @@ var Translator = function() {
 					throw "Sorry, I don't know what " + element + " means.";
 				}
 				console.log(maoriLexicon[element]);
-				// eventually: domElement.innerHTML += maoriLexicon[element];
+				translatedMessage += maoriLexicon[element] + " ";
 			})
+			// eventually: domElement.innerHTML = `<div>${translatedMessage}</div>`;
+			console.log("translatedMessage:", translatedMessage);
 		}
 	}
 }();
