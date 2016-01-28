@@ -15,6 +15,7 @@ var Translator = (function(frenchTranslator) {
     FrenchTrans[a] = b;
   };
   frenchTranslator.translateToFrench= function(input) {
+    var translatesentence = document.getElementById("translated-content");
     var translatedWords = "";
     var makeArray = input.split(" ");  
     console.log("input", makeArray);
@@ -22,9 +23,9 @@ var Translator = (function(frenchTranslator) {
       if (FrenchTrans.hasOwnProperty(element) === false) {
         throw "Sorry, I don't know what " + element + "means.";
       }
-      // domElement.innerHTML = `<div>${translatedMessage}</div>`;
       translatedWords += FrenchTrans[element] + " ";
     })
+      translatesentence.innerHTML = `<div>${translatedWords}</div>`;
   };
 
   return frenchTranslator;
