@@ -6,6 +6,7 @@ var Translator = (function (chineseTranslator) {
 			return chinese;
 		};
 		chineseTranslator.translateToChinese = function(userInput) {
+			var translatesentence = document.getElementById("translated-content");
 			var inputArray = userInput.split(" ");
 			var translatedMessage = "";
 			inputArray.forEach(function(english) {
@@ -13,6 +14,7 @@ var Translator = (function (chineseTranslator) {
 				translatedMessage += translationLegend[english] + "  ";
 			});
 				console.log("translatedMessage", translatedMessage);
+	      	translatesentence.innerHTML = `<div>${translatedMessage}</div>`;
 		};
 
 		return chineseTranslator;
