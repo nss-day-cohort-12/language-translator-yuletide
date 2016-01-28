@@ -4,26 +4,26 @@
 		<title>Team Yuletide Translator</title>	
 	</head>
 	<body>
-		<form>
+		<form id="form">
 			<!-- text area -->
-			<textarea name="english-content" id="english-content">merry christmas and happy new year
-			</textarea><br>
+			<textarea name="english-content" id="english-content">merry christmas and happy new year</textarea><br>
 			<!-- select w/ options for each language -->
-			<label for="language">Choose a language:</label><br>
-			<select name="language" id="language">
+			<label for="dropdown">Choose a language:</label><br>
+			<select name="dropdown" id="dropdown">
 				<option value="maori">Maori</option>
 				<option value="french">French</option>
 				<option value="chinese">Chinese</option>
 				<option value="swahili">Swahili</option>
 			</select><br>
 			<!-- translate button -->
-			<input type="submit" value="Translate It!"></input>
+			<button name="translate" id="translate">Translate It!</button>
 		</form>
 		<!-- empty dom element -->
 		<div id="translated-content"></div>
- 	<script src="maori.js"></script>
- 	<script src="chinese.js"></script>
-  	<script type="text/javascript" src="french.js"></script>
-	<script src="swahili.js"></script>
+ 	    <script src="maori.js"></script>
+ 	    <script src="swahili.js"></script>
+        <script src="french.js"></script>
+        <script src="chinese.js"></script>
+		<script src="events.js"></script>
 	</body>
 </html>
