@@ -13,8 +13,6 @@ var Translator = (function (swahiliTranslator) {
 			 return myLexicon;
 		 };
 		
-
-
 		swahiliTranslator.translate = function(userInput) {
 			var inputArray = userInput.split(" ");
 			var translatedSwahili= "";
