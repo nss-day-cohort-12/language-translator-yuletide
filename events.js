@@ -1,7 +1,7 @@
-var select = document.getElementById("language");
+var dropdown = document.getElementById("dropdown");
 var translate = document.getElementById("translate");
 var input = document.getElementById("english-content").innerHTML;
-
+ 	
 var chooseAConverter = function(){
 	switch (language) {
 		case "maori":
@@ -37,7 +37,9 @@ var chooseAConverter = function(){
 	}
 };
 
-select.addEventListener("change", function(){
-	language = select.options[select.selectedIndex].value;
+
+dropdown.addEventListener("change", function(){
+	language = dropdown.options[dropdown.selectedIndex].value;
 	chooseAConverter(language);
 });
+
