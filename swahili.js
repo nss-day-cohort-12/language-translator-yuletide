@@ -13,7 +13,8 @@ var Translator = (function (swahiliTranslator) {
 			 return myLexicon;
 		 };
 		
-		swahiliTranslator.translate = function(userInput) {
+		swahiliTranslator.translateToSwahili = function(userInput) {
+			var translatesentence = document.getElementById("translated-content");
 			var inputArray = userInput.split(" ");
 			var translatedSwahili= "";
 
@@ -21,6 +22,7 @@ var Translator = (function (swahiliTranslator) {
 				translatedSwahili = translatedSwahili + myLexicon[english]+ " ";
 			});	 
 			console.log("translation", translatedSwahili);
+			translatesentence.innerHTML = `<div>${translatedSwahili}</div>`;
 		};
 
 	return swahiliTranslator;
